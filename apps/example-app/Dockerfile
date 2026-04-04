@@ -1,10 +1,11 @@
 # syntax=docker/dockerfile:1
 #
-# Multi-stage Docker build for example-app
-# See ADR-006 for the containerization strategy.
+# Lambda-compatible Docker build for example-app
+# See ADR-006 for the containerization strategy and ADR-015 for AWS patterns.
 #
-# The build context must be the repository root (not this directory) because
-# libs/example-lib is a local path dependency required at build time:
+# This Dockerfile produces a container image that can run as an AWS Lambda
+# function. The build context must be the repository root (not this directory)
+# because libs/example-lib is a local path dependency required at build time:
 #   docker build -f apps/example-app/Dockerfile .
 
 # ── Stage 1: Builder ────────────────────────────────────────────────────────
@@ -37,17 +38,19 @@ RUN cd apps/example-app \
 RUN pip wheel --no-cache-dir --wheel-dir /wheels -r /tmp/app-requirements.txt
 RUN pip wheel --no-cache-dir --wheel-dir /wheels ./libs/example-lib
 
-# ── Stage 2: Runtime ────────────────────────────────────────────────────────
-# Minimal production image — no Poetry, no build tools, no source trees.
-FROM python:3.12-slim AS runtime
-
-WORKDIR /app
+# ── Stage 2: Lambda Runtime ─────────────────────────────────────────────────
+# Uses the AWS Lambda Python base image for production deployment.
+# See https://gallery.ecr.aws/lambda/python for available tags.
+FROM public.ecr.aws/lambda/python:3.12
 
 # Install pre-built wheels (no network access needed at this stage)
-COPY --from=builder /wheels /wheels
-RUN pip install --no-cache-dir /wheels/*.whl && rm -rf /wheels
+COPY --from=builder /wheels /tmp/wheels
+RUN pip install --no-cache-dir /tmp/wheels/*.whl && rm -rf /tmp/wheels
 
-# Copy application source code
-COPY apps/example-app/app ./app
+# Copy application source code into the Lambda task root
+COPY apps/example-app/app ${LAMBDA_TASK_ROOT}/app
 
-CMD ["python", "-m", "app.main"]
+# Lambda handler: module_path.function_name
+# The handler function must accept (event, context) arguments.
+# See app/lambda_handler.py for the implementation.
+CMD ["app.lambda_handler.handler"]
