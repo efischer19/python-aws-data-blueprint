@@ -39,9 +39,12 @@ and locking. Create these **before** running `terraform init`:
 
 ```bash
 # Create S3 bucket for state (replace placeholders)
+# Note: For us-east-1, omit --create-bucket-configuration.
+# For all other regions, include it with the correct LocationConstraint.
 aws s3api create-bucket \
   --bucket {{TF_STATE_BUCKET}} \
-  --region {{AWS_REGION}}
+  --region {{AWS_REGION}} \
+  --create-bucket-configuration LocationConstraint={{AWS_REGION}}
 
 # Enable versioning
 aws s3api put-bucket-versioning \

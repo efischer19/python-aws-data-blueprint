@@ -120,9 +120,11 @@ Attach an inline policy:
 }
 ```
 
-> **Note:** This is a broad bootstrap policy. After your infrastructure is
-> running, consider creating a more restrictive operations role with
-> least-privilege permissions for day-to-day CI/CD tasks.
+> **Note:** This is a broad bootstrap policy suitable for initial setup.
+> Once your infrastructure is running, replace it with least-privilege
+> permissions scoped to the specific resources and actions your project
+> needs (e.g., restrict `s3:*` to `s3:GetObject`, `s3:PutObject` on
+> specific bucket ARNs).
 
 ## Step 4 — Configure GitHub Repository
 
