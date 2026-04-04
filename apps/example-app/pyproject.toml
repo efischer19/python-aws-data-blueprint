@@ -8,7 +8,7 @@ packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-click = "^8.1"
+click = "^8.3"
 example-lib = { path = "../../libs/example-lib", develop = true }
 
 [tool.poetry.group.dev.dependencies]
