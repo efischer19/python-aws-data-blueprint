@@ -76,6 +76,56 @@ poetry run pytest --cov
 poetry run mypy .
 ```
 
+### AWS & Terraform Workflow
+
+This project deploys to AWS using Terraform for infrastructure management.
+See [ADR-015](../meta/adr/ADR-015-aws_cloud_provider.md),
+[ADR-016](../meta/adr/ADR-016-terraform_iac.md), and
+[ADR-017](../meta/adr/ADR-017-github_oidc_aws_auth.md).
+
+```bash
+# Navigate to the infrastructure directory
+cd infrastructure
+
+# Initialize Terraform (downloads providers, configures backend)
+terraform init
+
+# Preview infrastructure changes
+terraform plan
+
+# Apply infrastructure changes (use with caution)
+terraform apply
+
+# Format Terraform files
+terraform fmt
+
+# Validate Terraform configuration
+terraform validate
+```
+
+### AWS Conventions
+
+* **Never commit credentials.** No AWS access keys, secret keys, or session
+  tokens in source code. Use GitHub OIDC for CI/CD authentication
+  (see [ADR-017](../meta/adr/ADR-017-github_oidc_aws_auth.md)).
+* **Use placeholder values.** All AWS-specific identifiers use `{{...}}`
+  placeholders (e.g., `{{AWS_ACCOUNT_ID}}`, `{{AWS_REGION}}`).
+* **Use `boto3`** as the Python SDK for AWS service interaction.
+* **Follow least-privilege IAM.** Grant only the permissions each service
+  or function requires.
+* **Tag all resources** with `Project`, `Environment`, and `ManagedBy`
+  tags for cost tracking and organization.
+
+### Terraform Conventions
+
+* All infrastructure configuration lives in `infrastructure/`.
+* Use HCL (`.tf` files), not JSON.
+* Organize into `main.tf`, `variables.tf`, `outputs.tf`, `providers.tf`,
+  and `backend.tf`.
+* Use the `modules/` subdirectory for reusable patterns.
+* Pin provider versions in `providers.tf`.
+* Remote state is stored in S3 with DynamoDB locking.
+
 ### Pre-Commit Checks
 
 ```bash
