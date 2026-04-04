@@ -25,6 +25,7 @@ nav:
       - Local Development Dependencies: LOCAL_DEVELOPMENT_DEPENDENCIES.md
       - Feature Request Automation: feature-request-automation.md
   - Guides:
+      - Medallion Architecture: medallion-architecture.md
       - Documentation Guide: DOCUMENTATION_README.md
       - Shared Library Versioning: SHARED_LIBRARY_VERSIONING.md
 

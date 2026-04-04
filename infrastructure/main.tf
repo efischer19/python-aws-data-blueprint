@@ -5,7 +5,18 @@
 # before running `terraform init` and `terraform plan`.
 
 # -----------------------------------------------------------------------------
-# S3 Bucket — Data storage
+# S3 Bucket — Data storage (Medallion Architecture)
+# -----------------------------------------------------------------------------
+# This bucket stores all pipeline data using key prefixes to separate the
+# medallion layers (see ADR-018). The recommended key layout is:
+#
+#   s3://{{PROJECT_NAME}}-data-{env}/
+#   ├── bronze/{source}/{YYYY-MM-DD}/       # Raw ingested data
+#   ├── silver/{entity}/{YYYY-MM-DD}/       # Cleaned & validated data
+#   └── gold/served/{metric_name}/          # Business-ready aggregations
+#
+# A single bucket with key prefixes is preferred over separate buckets for
+# simplicity. IAM policies can restrict access per prefix if needed.
 # -----------------------------------------------------------------------------
 resource "aws_s3_bucket" "data" {
   bucket = "{{PROJECT_NAME}}-data-${var.environment}"
