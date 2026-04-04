@@ -1,6 +1,6 @@
 ---
 title: "ADR-015: AWS as Cloud Provider"
-status: "Proposed"
+status: "Accepted"
 date: "2026-04-04"
 tags:
   - "cloud"

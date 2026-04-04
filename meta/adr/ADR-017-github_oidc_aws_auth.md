@@ -1,6 +1,6 @@
 ---
 title: "ADR-017: GitHub OIDC for AWS Authentication"
-status: "Proposed"
+status: "Accepted"
 date: "2026-04-04"
 tags:
   - "ci-cd"

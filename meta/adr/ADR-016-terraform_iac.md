@@ -1,6 +1,6 @@
 ---
 title: "ADR-016: Terraform for Infrastructure as Code"
-status: "Proposed"
+status: "Accepted"
 date: "2026-04-04"
 tags:
   - "infrastructure"
