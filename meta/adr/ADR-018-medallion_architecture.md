@@ -1,7 +1,7 @@
 ---
 title: "ADR-018: Medallion Architecture for Data Pipelines"
 status: "Accepted"
-date: "2026-04-04"
+date: "2026-04-09"
 tags:
   - "data-pipeline"
   - "architecture"
