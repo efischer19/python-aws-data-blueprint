@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://{{GITHUB_OWNER}}.github.io/{{PROJECT_NAME}}/DOCUMENTATION_README/">
+        <link rel="canonical" href="https://{{GITHUB_OWNER}}.github.io/{{PROJECT_NAME}}/MEDALLION_ARCHITECTURE/">
       
       
-        <link rel="prev" href="../MEDALLION_ARCHITECTURE/">
+        <link rel="prev" href="../FEATURE_REQUEST_AUTOMATION/">
       
       
-        <link rel="next" href="../SHARED_LIBRARY_VERSIONING/">
+        <link rel="next" href="../DOCUMENTATION_README/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Documentation Guide - {{PROJECT_NAME}} Documentation</title>
+        <title>Medallion Architecture - {{PROJECT_NAME}} Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-guide" class="md-skip">
+        <a href="#medallion-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documentation Guide
+              Medallion Architecture
             
           </span>
         </div>
@@ -228,7 +228,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../MEDALLION_ARCHITECTURE/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -532,34 +532,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../MEDALLION_ARCHITECTURE/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Medallion Architecture
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -579,7 +551,7 @@
   <span class="md-ellipsis">
     
   
-    Documentation Guide
+    Medallion Architecture
   
 
     
@@ -597,7 +569,7 @@
   <span class="md-ellipsis">
     
   
-    Documentation Guide
+    Medallion Architecture
   
 
     
@@ -634,10 +606,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#s3-key-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        S3 Key Conventions
       
     </span>
   </a>
@@ -645,10 +617,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-the-documentation" class="md-nav__link">
+  <a href="#shared-data-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Building the Documentation
+        Shared Data Models
       
     </span>
   </a>
@@ -656,43 +628,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#previewing-locally" class="md-nav__link">
+  <a href="#how-to-customize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Previewing Locally
+        How to Customize
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Customize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define-your-data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Define Your Data Models
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-implement-data-source-logic" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Directory Structure
+        2. Implement Data Source Logic
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#writing-guidelines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-add-s3-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Writing Guidelines
+        3. Add S3 Integration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-scheduling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment
+        4. Configure Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Decision
       
     </span>
   </a>
@@ -703,6 +703,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOCUMENTATION_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -781,10 +809,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#s3-key-conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        S3 Key Conventions
       
     </span>
   </a>
@@ -792,10 +820,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-the-documentation" class="md-nav__link">
+  <a href="#shared-data-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Building the Documentation
+        Shared Data Models
       
     </span>
   </a>
@@ -803,43 +831,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#previewing-locally" class="md-nav__link">
+  <a href="#how-to-customize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Previewing Locally
+        How to Customize
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Customize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define-your-data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Define Your Data Models
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-implement-data-source-logic" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Directory Structure
+        2. Implement Data Source Logic
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#writing-guidelines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-add-s3-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Writing Guidelines
+        3. Add S3 Integration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#4-configure-scheduling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment
+        4. Configure Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Decision
       
     </span>
   </a>
@@ -863,65 +919,120 @@
 
 
 
-<h1 id="documentation-guide">Documentation Guide<a class="headerlink" href="#documentation-guide" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>How to build, preview, and contribute to the project documentation using
-MkDocs.</p>
-</blockquote>
+<h1 id="medallion-architecture">Medallion Architecture<a class="headerlink" href="#medallion-architecture" title="Permanent link">&para;</a></h1>
+<p>This project includes a <strong>medallion architecture</strong> example that demonstrates
+a Bronze/Silver/Gold data pipeline pattern using S3 and AWS Lambda.</p>
+<div class="admonition info">
+<p class="admonition-title">This is scaffolding, not a working pipeline</p>
+<p>The example apps contain placeholder logic with comments showing where
+to add real data processing. Replace the <code>TODO</code> markers with your
+domain-specific code.</p>
+</div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This project uses <strong><a href="https://www.mkdocs.org/">MkDocs</a></strong> with the
-<strong><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></strong>
-theme to generate a static documentation site from Markdown source files in
-the <code>docs-src/</code> directory.</p>
-<p>See <a href="https://github.com/{{GITHUB_OWNER}}/{{PROJECT_NAME}}/blob/main/meta/adr/ADR-012-use_mkdocs.md">ADR-012</a> for the decision record on
-using MkDocs.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>The medallion architecture organizes data pipelines into three progressive
+layers of data quality:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────┐     ┌──────────────────┐     ┌──────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│    Bronze     │     │      Silver      │     │       Gold       │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  (Ingestion)  │ ──► │  (Processing)    │ ──► │   (Analytics)    │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│              │     │                  │     │                  │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│ Raw data from│     │ Validated &amp;      │     │ Aggregated       │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│ external     │     │ transformed      │     │ business-ready   │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│ sources      │     │ entities         │     │ metrics          │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└──────────────┘     └──────────────────┘     └──────────────────┘
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Application</th>
+<th style="text-align: left;">S3 Prefix</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bronze</strong></td>
+<td style="text-align: left;"><code>apps/example-ingestion/</code></td>
+<td style="text-align: left;"><code>bronze/{source}/{date}/</code></td>
+<td style="text-align: left;">Raw data with minimal validation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Silver</strong></td>
+<td style="text-align: left;"><code>apps/example-processing/</code></td>
+<td style="text-align: left;"><code>silver/{entity}/{date}/</code></td>
+<td style="text-align: left;">Cleaned and validated entities</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gold</strong></td>
+<td style="text-align: left;"><code>apps/example-analytics/</code></td>
+<td style="text-align: left;"><code>gold/served/{metric_name}/</code></td>
+<td style="text-align: left;">Business-ready aggregations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="s3-key-conventions">S3 Key Conventions<a class="headerlink" href="#s3-key-conventions" title="Permanent link">&para;</a></h2>
+<p>All data is stored in a single S3 bucket with key prefixes to separate
+the layers:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>s3://{{S3_BUCKET_NAME}}/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── bronze/{source}/{YYYY-MM-DD}/       # Raw ingested data
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── silver/{entity}/{YYYY-MM-DD}/       # Cleaned &amp; validated data
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>└── gold/served/{metric_name}/          # Business-ready aggregations
+</code></pre></div>
+<p>The <code>MedallionPaths</code> utility in <code>libs/example-data/</code> generates these
+prefixes consistently:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">example_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">MedallionPaths</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">paths</span> <span class="o">=</span> <span class="n">MedallionPaths</span><span class="p">(</span><span class="s2">&quot;my-project-data-dev&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">paths</span><span class="o">.</span><span class="n">bronze</span><span class="p">(</span><span class="s2">&quot;api-source&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># =&gt; &quot;bronze/api-source/2026-01-15/&quot;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">paths</span><span class="o">.</span><span class="n">silver</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># =&gt; &quot;silver/users/2026-01-15/&quot;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">paths</span><span class="o">.</span><span class="n">gold</span><span class="p">(</span><span class="s2">&quot;daily-active-users&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># =&gt; &quot;gold/served/daily-active-users/&quot;</span>
+</code></pre></div>
+<h2 id="shared-data-models">Shared Data Models<a class="headerlink" href="#shared-data-models" title="Permanent link">&para;</a></h2>
+<p>The <code>libs/example-data/</code> library provides Pydantic model skeletons for
+each layer:</p>
 <ul>
-<li>Python 3.12+</li>
-<li>pip (or Poetry)</li>
+<li><strong><code>BronzeRecord</code></strong> — Raw ingested record with source metadata</li>
+<li><strong><code>SilverEntity</code></strong> — Cleaned, validated entity with strict types</li>
+<li><strong><code>GoldMetric</code></strong> — Aggregated business metric with dimensions</li>
 </ul>
-<p>Install the documentation dependencies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs-requirements.txt
+<p>These models enforce data contracts between pipeline stages. Customize
+them with your domain-specific fields.</p>
+<h2 id="how-to-customize">How to Customize<a class="headerlink" href="#how-to-customize" title="Permanent link">&para;</a></h2>
+<h3 id="1-define-your-data-models">1. Define Your Data Models<a class="headerlink" href="#1-define-your-data-models" title="Permanent link">&para;</a></h3>
+<p>Edit the models in <code>libs/example-data/example_data/models.py</code> to match
+your domain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">SilverEntity</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">entity_id</span><span class="p">:</span> <span class="nb">str</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span>              <span class="c1"># Add validated fields</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">category</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>  <span class="c1"># Add constrained types</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">score</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="building-the-documentation">Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Build the static site into the site/ directory</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./scripts/build-docs.sh
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Or use MkDocs directly</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>mkdocs<span class="w"> </span>build
+<h3 id="2-implement-data-source-logic">2. Implement Data Source Logic<a class="headerlink" href="#2-implement-data-source-logic" title="Permanent link">&para;</a></h3>
+<p>In <code>apps/example-ingestion/app/main.py</code>, replace <code>fetch_from_source()</code>
+with your real data source:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">fetch_from_source</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.example.com/data&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;results&quot;</span><span class="p">]</span>
 </code></pre></div>
-<h2 id="previewing-locally">Previewing Locally<a class="headerlink" href="#previewing-locally" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>serve
-</code></pre></div>
-<p>Then open <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> in your browser. MkDocs will live-reload
-when you save changes to the source files.</p>
-<h2 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docs-src/
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── index.md                           # Landing page
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── CONTRIBUTING.md                    # Contributing guidelines
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├── DEVELOPMENT_PHILOSOPHY.md          # Development philosophy
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>├── DOCUMENTATION_README.md            # This file
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>├── LOCAL_DEVELOPMENT_DEPENDENCIES.md  # Tool installation guide
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>├── SHARED_LIBRARY_VERSIONING.md       # Library versioning guide
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>└── FEATURE_REQUEST_AUTOMATION.md       # Feature request workflow
-</code></pre></div>
-<h2 id="writing-guidelines">Writing Guidelines<a class="headerlink" href="#writing-guidelines" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Use Markdown (<code>.md</code>) for all documentation files.</li>
-<li>Place new files in <code>docs-src/</code> and add them to the <code>nav</code> section of
-  <code>mkdocs.yml</code>.</li>
-<li>Follow the project's
-  <a href="https://github.com/{{GITHUB_OWNER}}/{{PROJECT_NAME}}/blob/main/.markdownlint-cli2.yaml">markdownlint configuration</a> for style
-  consistency.</li>
-<li>Use admonitions (<code>!!! note</code>, <code>!!! warning</code>) for callouts.</li>
-<li>Use fenced code blocks with language identifiers for syntax highlighting.</li>
-</ul>
-<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
-<p>The documentation site is built as a static site in the <code>site/</code> directory.
-It can be deployed to GitHub Pages or any static hosting provider.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Deploy to GitHub Pages (if configured)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mkdocs<span class="w"> </span>gh-deploy
-</code></pre></div>
+<h3 id="3-add-s3-integration">3. Add S3 Integration<a class="headerlink" href="#3-add-s3-integration" title="Permanent link">&para;</a></h3>
+<p>Replace the placeholder <code>read_from_s3()</code> and <code>write_to_s3()</code> functions
+with real <code>boto3</code> calls. See the docstrings in each <code>app/main.py</code> for
+example implementations.</p>
+<h3 id="4-configure-scheduling">4. Configure Scheduling<a class="headerlink" href="#4-configure-scheduling" title="Permanent link">&para;</a></h3>
+<p>Edit the workflow stubs in <code>.github/workflows/pipeline-*.yml</code> to enable
+scheduled runs. Uncomment the cron expressions and adjust the timing to
+match your data source update frequency.</p>
+<h2 id="architecture-decision">Architecture Decision<a class="headerlink" href="#architecture-decision" title="Permanent link">&para;</a></h2>
+<p>See <code>meta/adr/ADR-018-medallion_architecture.md</code> in the repository root
+for the full rationale and design considerations.</p>
 
 
 
