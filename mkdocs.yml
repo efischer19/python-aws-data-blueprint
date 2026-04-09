@@ -23,8 +23,9 @@ nav:
       - Contributing: CONTRIBUTING.md
       - Development Philosophy: DEVELOPMENT_PHILOSOPHY.md
       - Local Development Dependencies: LOCAL_DEVELOPMENT_DEPENDENCIES.md
-      - Feature Request Automation: feature-request-automation.md
+      - Feature Request Automation: FEATURE_REQUEST_AUTOMATION.md
   - Guides:
+      - Medallion Architecture: MEDALLION_ARCHITECTURE.md
       - Documentation Guide: DOCUMENTATION_README.md
       - Shared Library Versioning: SHARED_LIBRARY_VERSIONING.md
 

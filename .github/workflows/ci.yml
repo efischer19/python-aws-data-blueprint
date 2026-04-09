@@ -104,7 +104,11 @@ jobs:
       matrix:
         project:
           - apps/example-app
+          - apps/example-ingestion
+          - apps/example-processing
+          - apps/example-analytics
           - libs/example-lib
+          - libs/example-data
     steps:
       - name: Checkout code
         uses: actions/checkout@v6

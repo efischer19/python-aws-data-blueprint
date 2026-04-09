@@ -53,7 +53,7 @@ docs-src/
 ├── DOCUMENTATION_README.md            # This file
 ├── LOCAL_DEVELOPMENT_DEPENDENCIES.md  # Tool installation guide
 ├── SHARED_LIBRARY_VERSIONING.md       # Library versioning guide
-└── feature-request-automation.md      # Feature request workflow
+└── FEATURE_REQUEST_AUTOMATION.md       # Feature request workflow
 ```
 
 ## Writing Guidelines
