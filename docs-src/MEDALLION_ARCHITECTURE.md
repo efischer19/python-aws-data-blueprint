@@ -114,5 +114,5 @@ match your data source update frequency.
 
 ## Architecture Decision
 
-See [ADR-018: Medallion Architecture](../meta/adr/ADR-018-medallion_architecture.md)
+See `meta/adr/ADR-018-medallion_architecture.md` in the repository root
 for the full rationale and design considerations.
