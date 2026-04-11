@@ -62,7 +62,7 @@ jobs:
 
       - name: Configure AWS credentials
         if: inputs.push == true
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ vars.PROJECT_NAME }}-github-actions
           role-session-name: GitHubActions-BuildPush-${{ github.run_id }}
@@ -74,7 +74,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Build Docker image
         working-directory: apps/${{ inputs.app_name }}
