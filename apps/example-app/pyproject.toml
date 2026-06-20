@@ -12,7 +12,7 @@ click = "^8.4"
 example-lib = { path = "../../libs/example-lib", develop = true }
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^9.0"
+pytest = "^9.1"
 ruff = "^0.15"
 
 [tool.poetry.scripts]
