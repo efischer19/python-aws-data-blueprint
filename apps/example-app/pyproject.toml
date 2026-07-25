@@ -13,7 +13,7 @@ example-lib = { path = "../../libs/example-lib", develop = true }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.1"
-ruff = "^0.15"
+ruff = "^0.16"
 
 [tool.poetry.scripts]
 example-app = "app.main:cli"
